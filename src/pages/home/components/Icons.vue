@@ -65,35 +65,43 @@ export default {
 }
 </script>
 <style scoped>
-  .icons >>> .swiper-container .swiper-wrapper .swiper-slide {
-    display: flex;
-    flex-wrap: wrap;
+  .icons {
     width: 100%;
     height: 0;
     padding-bottom: 50%;
+    position: relative;
+  }
+  .icons >>> .swiper-container {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
+  .icons >>> .swiper-wrapper{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
+  .icons >>>.swiper-slide {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
   }
 
-  .icons >>> .swiper-pagination-bullet-active{
-    background: coral;
-  }
   .icon-img {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     width: 25%;
-    height: 0;
-    padding-bottom: 25%;
+    height: 50%;
   }
-
   .icon-img-content {
-    margin-top: .1rem;
-    width: 70%;
-    height: auto;
+    width: 80%;
+    height: 80%;
   }
-
   .icon-desc {
-    padding: .1rem;
     font-size: .3rem;
-    color: #333333;
   }
 </style>
